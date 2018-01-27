@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>News Template - Bootsrap 4 #user-interface #slider #layouts #card user #lists - Bootsnipp.com</title>
+    <link rel="stylesheet" href="public/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/css/styles.min.css">
+    <script src="public/js/jquery.js"></script>
+
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-2 col-md-2">
+        <div id="almost-show">
+        </div>
+    </div>
+    <div class="col-lg-10 col-md-10" style="border-left: 1px solid red">
+        <!--<div class="footer" style="background: burlywood;">-->
+            <!--Trong đó:-->
+
+            <!--$('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một-->
+            <!--hàm xử lý khi xảy ra sự kiện click.-->
+            <!--$('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"-->
+            <!--$('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".-->
+            <!--Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.-->
+
+            <!--3. Lời kết-->
+            <!--Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng-->
+            <!--các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không-->
+            <!--hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.-->
+
+            <!--Bài 01: jQuery là gì? Viết chương trình jquery đầu tiên-->
+            <!--Đăng bởi: TheHalfHeart - Vào ngày: 15-08-2014 - View: 31211-->
+            <!--Trong công nghệ web 2.0 thì Javascript là một thành phần không thể thiếu bởi vì các hiệu ứng trên website hầu-->
+            <!--hết là kết quả của sự kết hợp Javascript và CSS, và để tạo các hiệu ứng đó thì ta phải lập trình những đoạn code-->
+            <!--Javascript khá là dài dòng nên rất khó bảo trì và phát triển, vì vậy jQuery đã ra đời nhằm giải quyết vấn đề-->
+            <!--này.-->
+
+            <!--Trước khi xây dựng ứng dụng jQuery thì ta sẽ tìm hiểu khái niệm jQuery là gì đã nhé.-->
+
+            <!--Nội dung chính-->
+
+            <!--1. jQuery là gì?-->
+            <!--2. Viết chương trình jQuery đầu tiên-->
+            <!--Sử dụng javascript thuần-->
+            <!--Sử dụng thư viện jQuery-->
+            <!--3. Lời kết-->
+            <!--1. jQuery là gì?-->
+            <!--Bài viết được đăng tại freetuts.net-->
+            <!--jQuery là một thư viện được xây dựng từ Javascript nhằm giúp lập trình viên xây dựng những chức năng có sử dụng-->
+            <!--Javascript trở nên dễ dàng hơn. jQuery được tích hợp nhiều module khác nhau từ module hiệu ứng cho đến module-->
+            <!--truy vấn selector. jQuery được sử dụng đến 99% trên tổng số website trên thế giới (trừ những website sử dụng JS-->
+            <!--Framework).-->
+
+            <!--Những việc làm hấp dẫn-->
+
+            <!--(HCM) Front-end Engineer (Web)-->
+            <!--WonoloHo Chi MinhNegotiable-->
+            <!--Front-EndWeb-->
+
+            <!--(HCM) Senior UI-UX Designer (UX/UI Design, Android, iOS, HTML, Mobile)-->
+            <!--Qamera DesignHo Chi MinhNegotiable-->
+            <!--UX/UI DesignAndroidiOSHTMLMobile-->
+
+            <!--(HN) Web Developer (HTML5, JavaScript, JQuery, Full-Stack)-->
+            <!--HoloscribeHa NoiNegotiable-->
+            <!--HTML5JavaScriptJQueryFull-StackWeb-->
+            <!--Các module chính của jQuery bao gồm:-->
+
+            <!--Ajax - xử lý Ajax-->
+            <!--Atributes - Xử lý các thuộc tính của đối tượng HTML-->
+            <!--Effect - xử lý hiệu ứng-->
+            <!--Event - xử lý sự kiện-->
+            <!--Form - xử lý sự kiện liên quan tới form-->
+            <!--DOM - xử lý Data Object Model-->
+            <!--Selector - xử lý luồng lách giữa các đối tượng HTML-->
+            <!--Để xem danh sách đầy đủ thì bạn vào trang jQuery API nhé.-->
+
+            <!--2. Viết chương trình jQuery đầu tiên-->
+            <!--Bài tập: Bây giờ để các bạn dễ hình dung hơn thì tôi có một bài toán như sau: Tạo một textbox và một button, sau-->
+            <!--đó viết javascript cho sự kiện click vào button thì sẽ show nội dung của ô textbox.-->
+
+            <!--Sử dụng javascript thuần-->
+            <!--Nếu bạn chưa biết Javascript thì hãy xem serie Javascript căn bản này nhé.-->
+
+            <!--Với bài toán này ta sẽ giải như sau: XEM DEMO-->
+
+            <!--function showTextVal(){-->
+            <!--var value = document.getElementById('id-textbox').value;-->
+            <!--alert(value);-->
+            <!--}-->
+            <!--Ở button tôi đã gắn hàm showTextVal() vào sự kiện click, sau đó tôi có định nghĩa một hàm showTextVal() với chức-->
+            <!--năng là hiển thị lên nội dung của textbox. Bây giờ ta sẽ tham khảo bài giải trong jquery nhé.-->
+
+            <!--Sử dụng thư viện jQuery-->
+            <!--Như tôi đã giới thiêu ở phần jQuery là gì thì jQuery là một thư viện viết bằng Javascript nên muốn sử dụng được-->
+            <!--nó ta phải download về, sau đó đặt trong project và dùng thẻ script để gọi file jquery ra với cú pháp:-->
+
+            <!--1-->
+            <!--Bạn phải import file jQuery vào rồi thì mới sử dụng được các hàm của nó, nghĩa là tất cả các đoạn code nào có sử-->
+            <!--dụng thư viện jQuery đều phải nằm phía dưới đoạn code import script trên.-->
+
+            <!--Các bước thực hiện như sau: XEM DEMO.-->
+
+            <!--Bước 1: Download bộ thư viện jquery tại đây.-->
+
+            <!--Bước 2: Tạo file index.html với nội dung như sau:-->
+
+            <!--Trong file index.html mình đã import file jQuery vào và đồng thời tạo một thẻ script nằm phía dưới để code những-->
+            <!--đoạn mã jQuery. Điều này tuân thủ nguyên tắc phải import file jQuery rồi mới sử dụng được.-->
+
+            <!--Bước 3: Viết sự kiện click với jQuery.-->
+
+            <!--Ở bước này thì trước tiên ta tìm hiểu cú pháp của jQuery đã nhé. jQuery luôn bắt đầu bằng ký tự đô la $ hoặc-->
+            <!--dòng chữ jQuery.-->
+
+            <!--Ví dụ-->
+            <!--1-->
+            <!--2-->
+            <!--3-->
+            <!--4-->
+            <!--5-->
+            <!--6-->
+            <!--7-->
+            <!--// Lấy đối tượng có id = id-button trong javascript-->
+            <!--var object = document.getElementById('id-button');-->
+
+            <!--// Lấy đối tượng có id = id-button trong jQuery-->
+            <!--var object = $('#id-button');-->
+            <!--//Hoặc-->
+            <!--var object = jQuery('#id-button');-->
+            <!--Rất rõ ràng rồi nhỉ cool bây giờ ta sẽ viết jQuery xử lý sự kiện click nhé. Bạn sửa lại file index.html tại phần-->
+            <!--xử lý jQuery mà mình đã đánh dấu như sau:-->
+
+            <!--Code-->
+            <!--1-->
+            <!--2-->
+            <!--3-->
+            <!--4-->
+            <!--5-->
+            <!--6-->
+            <!--7-->
+            <!--8-->
+            <!--9-->
+            <!--10-->
+            <!--// Khi click vào button có id = id-button-->
+            <!--$('#id-button').click(function()-->
+            <!--{-->
+            <!--// Cách 1: Khai báo biến và lấy giá trị-->
+            <!--var textbox = $('#id-textbox');-->
+            <!--alert(textbox.val());-->
+
+            <!--// Cách 2: Truy xuất trực tiếp-->
+            <!--alert($('#id-textbox').val());-->
+            <!--});-->
+            <!--Trong đó:-->
+
+            <!--$('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một-->
+            <!--hàm xử lý khi xảy ra sự kiện click.-->
+            <!--$('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"-->
+            <!--$('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".-->
+            <!--Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.-->
+
+            <!--3. Lời kết-->
+            <!--Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng-->
+            <!--các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không-->
+            <!--hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.-->
+        <!--</div>-->
+        <!--<div class="footer" style="background: burlywood;">-->
+            <!--Trong đó:-->
+
+            <!--$('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một-->
+            <!--hàm xử lý khi xảy ra sự kiện click.-->
+            <!--$('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"-->
+            <!--$('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".-->
+            <!--Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.-->
+
+            <!--3. Lời kết-->
+            <!--Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng-->
+            <!--các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không-->
+            <!--hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.-->
+
+            <!--Bài 01: jQuery là gì? Viết chương trình jquery đầu tiên-->
+            <!--Đăng bởi: TheHalfHeart - Vào ngày: 15-08-2014 - View: 31211-->
+            <!--Trong công nghệ web 2.0 thì Javascript là một thành phần không thể thiếu bởi vì các hiệu ứng trên website hầu-->
+            <!--hết là kết quả của sự kết hợp Javascript và CSS, và để tạo các hiệu ứng đó thì ta phải lập trình những đoạn code-->
+            <!--Javascript khá là dài dòng nên rất khó bảo trì và phát triển, vì vậy jQuery đã ra đời nhằm giải quyết vấn đề-->
+            <!--này.-->
+
+            <!--Trước khi xây dựng ứng dụng jQuery thì ta sẽ tìm hiểu khái niệm jQuery là gì đã nhé.-->
+
+            <!--Nội dung chính-->
+
+            <!--1. jQuery là gì?-->
+            <!--2. Viết chương trình jQuery đầu tiên-->
+            <!--Sử dụng javascript thuần-->
+            <!--Sử dụng thư viện jQuery-->
+            <!--3. Lời kết-->
+            <!--1. jQuery là gì?-->
+            <!--Bài viết được đăng tại freetuts.net-->
+            <!--jQuery là một thư viện được xây dựng từ Javascript nhằm giúp lập trình viên xây dựng những chức năng có sử dụng-->
+            <!--Javascript trở nên dễ dàng hơn. jQuery được tích hợp nhiều module khác nhau từ module hiệu ứng cho đến module-->
+            <!--truy vấn selector. jQuery được sử dụng đến 99% trên tổng số website trên thế giới (trừ những website sử dụng JS-->
+            <!--Framework).-->
+
+            <!--Những việc làm hấp dẫn-->
+
+            <!--(HCM) Front-end Engineer (Web)-->
+            <!--WonoloHo Chi MinhNegotiable-->
+            <!--Front-EndWeb-->
+
+            <!--(HCM) Senior UI-UX Designer (UX/UI Design, Android, iOS, HTML, Mobile)-->
+            <!--Qamera DesignHo Chi MinhNegotiable-->
+            <!--UX/UI DesignAndroidiOSHTMLMobile-->
+
+            <!--(HN) Web Developer (HTML5, JavaScript, JQuery, Full-Stack)-->
+            <!--HoloscribeHa NoiNegotiable-->
+            <!--HTML5JavaScriptJQueryFull-StackWeb-->
+            <!--Các module chính của jQuery bao gồm:-->
+
+            <!--Ajax - xử lý Ajax-->
+            <!--Atributes - Xử lý các thuộc tính của đối tượng HTML-->
+            <!--Effect - xử lý hiệu ứng-->
+            <!--Event - xử lý sự kiện-->
+            <!--Form - xử lý sự kiện liên quan tới form-->
+            <!--DOM - xử lý Data Object Model-->
+            <!--Selector - xử lý luồng lách giữa các đối tượng HTML-->
+            <!--Để xem danh sách đầy đủ thì bạn vào trang jQuery API nhé.-->
+
+            <!--2. Viết chương trình jQuery đầu tiên-->
+            <!--Bài tập: Bây giờ để các bạn dễ hình dung hơn thì tôi có một bài toán như sau: Tạo một textbox và một button, sau-->
+            <!--đó viết javascript cho sự kiện click vào button thì sẽ show nội dung của ô textbox.-->
+
+            <!--Sử dụng javascript thuần-->
+            <!--Nếu bạn chưa biết Javascript thì hãy xem serie Javascript căn bản này nhé.-->
+
+            <!--Với bài toán này ta sẽ giải như sau: XEM DEMO-->
+
+            <!--function showTextVal(){-->
+            <!--var value = document.getElementById('id-textbox').value;-->
+            <!--alert(value);-->
+            <!--}-->
+            <!--Ở button tôi đã gắn hàm showTextVal() vào sự kiện click, sau đó tôi có định nghĩa một hàm showTextVal() với chức-->
+            <!--năng là hiển thị lên nội dung của textbox. Bây giờ ta sẽ tham khảo bài giải trong jquery nhé.-->
+
+            <!--Sử dụng thư viện jQuery-->
+            <!--Như tôi đã giới thiêu ở phần jQuery là gì thì jQuery là một thư viện viết bằng Javascript nên muốn sử dụng được-->
+            <!--nó ta phải download về, sau đó đặt trong project và dùng thẻ script để gọi file jquery ra với cú pháp:-->
+
+            <!--1-->
+            <!--Bạn phải import file jQuery vào rồi thì mới sử dụng được các hàm của nó, nghĩa là tất cả các đoạn code nào có sử-->
+            <!--dụng thư viện jQuery đều phải nằm phía dưới đoạn code import script trên.-->
+
+            <!--Các bước thực hiện như sau: XEM DEMO.-->
+
+            <!--Bước 1: Download bộ thư viện jquery tại đây.-->
+
+            <!--Bước 2: Tạo file index.html với nội dung như sau:-->
+
+            <!--Trong file index.html mình đã import file jQuery vào và đồng thời tạo một thẻ script nằm phía dưới để code những-->
+            <!--đoạn mã jQuery. Điều này tuân thủ nguyên tắc phải import file jQuery rồi mới sử dụng được.-->
+
+            <!--Bước 3: Viết sự kiện click với jQuery.-->
+
+            <!--Ở bước này thì trước tiên ta tìm hiểu cú pháp của jQuery đã nhé. jQuery luôn bắt đầu bằng ký tự đô la $ hoặc-->
+            <!--dòng chữ jQuery.-->
+
+            <!--Ví dụ-->
+            <!--1-->
+            <!--2-->
+            <!--3-->
+            <!--4-->
+            <!--5-->
+            <!--6-->
+            <!--7-->
+            <!--// Lấy đối tượng có id = id-button trong javascript-->
+            <!--var object = document.getElementById('id-button');-->
+
+            <!--// Lấy đối tượng có id = id-button trong jQuery-->
+            <!--var object = $('#id-button');-->
+            <!--//Hoặc-->
+            <!--var object = jQuery('#id-button');-->
+            <!--Rất rõ ràng rồi nhỉ cool bây giờ ta sẽ viết jQuery xử lý sự kiện click nhé. Bạn sửa lại file index.html tại phần-->
+            <!--xử lý jQuery mà mình đã đánh dấu như sau:-->
+
+            <!--Code-->
+            <!--1-->
+            <!--2-->
+            <!--3-->
+            <!--4-->
+            <!--5-->
+            <!--6-->
+            <!--7-->
+            <!--8-->
+            <!--9-->
+            <!--10-->
+            <!--// Khi click vào button có id = id-button-->
+            <!--$('#id-button').click(function()-->
+            <!--{-->
+            <!--// Cách 1: Khai báo biến và lấy giá trị-->
+            <!--var textbox = $('#id-textbox');-->
+            <!--alert(textbox.val());-->
+
+            <!--// Cách 2: Truy xuất trực tiếp-->
+            <!--alert($('#id-textbox').val());-->
+            <!--});-->
+            <!--Trong đó:-->
+
+            <!--$('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một-->
+            <!--hàm xử lý khi xảy ra sự kiện click.-->
+            <!--$('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"-->
+            <!--$('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".-->
+            <!--Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.-->
+
+            <!--3. Lời kết-->
+            <!--Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng-->
+            <!--các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không-->
+            <!--hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.-->
+        <!--</div>-->
+        <div id="content" style="text-align: justify">
+            Bài 01: jQuery là gì? Viết chương trình jquery đầu tiên
+            Đăng bởi: TheHalfHeart - Vào ngày: 15-08-2014 - View: 31211
+            Trong công nghệ web 2.0 thì Javascript là một thành phần không thể thiếu bởi vì các hiệu ứng trên website hầu
+            hết là kết quả của sự kết hợp Javascript và CSS, và để tạo các hiệu ứng đó thì ta phải lập trình những đoạn code
+            Javascript khá là dài dòng nên rất khó bảo trì và phát triển, vì vậy jQuery đã ra đời nhằm giải quyết vấn đề
+            này.
+
+            Trước khi xây dựng ứng dụng jQuery thì ta sẽ tìm hiểu khái niệm jQuery là gì đã nhé.
+
+            Nội dung chính
+
+            1. jQuery là gì?
+            2. Viết chương trình jQuery đầu tiên
+            Sử dụng javascript thuần
+            Sử dụng thư viện jQuery
+            3. Lời kết
+            1. jQuery là gì?
+            Bài viết được đăng tại freetuts.net
+            jQuery là một thư viện được xây dựng từ Javascript nhằm giúp lập trình viên xây dựng những chức năng có sử dụng
+            Javascript trở nên dễ dàng hơn. jQuery được tích hợp nhiều module khác nhau từ module hiệu ứng cho đến module
+            truy vấn selector. jQuery được sử dụng đến 99% trên tổng số website trên thế giới (trừ những website sử dụng JS
+            Framework).
+
+            Những việc làm hấp dẫn
+
+            (HCM) Front-end Engineer (Web)
+            WonoloHo Chi MinhNegotiable
+            Front-EndWeb
+
+            (HCM) Senior UI-UX Designer (UX/UI Design, Android, iOS, HTML, Mobile)
+            Qamera DesignHo Chi MinhNegotiable
+            UX/UI DesignAndroidiOSHTMLMobile
+
+            (HN) Web Developer (HTML5, JavaScript, JQuery, Full-Stack)
+            HoloscribeHa NoiNegotiable
+            HTML5JavaScriptJQueryFull-StackWeb
+            Các module chính của jQuery bao gồm:
+
+            Ajax - xử lý Ajax
+            Atributes - Xử lý các thuộc tính của đối tượng HTML
+            Effect - xử lý hiệu ứng
+            Event - xử lý sự kiện
+            Form - xử lý sự kiện liên quan tới form
+            DOM - xử lý Data Object Model
+            Selector - xử lý luồng lách giữa các đối tượng HTML
+            Để xem danh sách đầy đủ thì bạn vào trang jQuery API nhé.
+
+            2. Viết chương trình jQuery đầu tiên
+            Bài tập: Bây giờ để các bạn dễ hình dung hơn thì tôi có một bài toán như sau: Tạo một textbox và một button, sau
+            đó viết javascript cho sự kiện click vào button thì sẽ show nội dung của ô textbox.
+
+            Sử dụng javascript thuần
+            Nếu bạn chưa biết Javascript thì hãy xem serie Javascript căn bản này nhé.
+
+            Với bài toán này ta sẽ giải như sau: XEM DEMO
+
+            function showTextVal(){
+            var value = document.getElementById('id-textbox').value;
+            alert(value);
+            }
+            Ở button tôi đã gắn hàm showTextVal() vào sự kiện click, sau đó tôi có định nghĩa một hàm showTextVal() với chức
+            năng là hiển thị lên nội dung của textbox. Bây giờ ta sẽ tham khảo bài giải trong jquery nhé.
+
+            Sử dụng thư viện jQuery
+            Như tôi đã giới thiêu ở phần jQuery là gì thì jQuery là một thư viện viết bằng Javascript nên muốn sử dụng được
+            nó ta phải download về, sau đó đặt trong project và dùng thẻ script để gọi file jquery ra với cú pháp:
+
+            1
+            Bạn phải import file jQuery vào rồi thì mới sử dụng được các hàm của nó, nghĩa là tất cả các đoạn code nào có sử
+            dụng thư viện jQuery đều phải nằm phía dưới đoạn code import script trên.
+
+            Các bước thực hiện như sau: XEM DEMO.
+
+            Bước 1: Download bộ thư viện jquery tại đây.
+
+            Bước 2: Tạo file index.html với nội dung như sau:
+
+            Trong file index.html mình đã import file jQuery vào và đồng thời tạo một thẻ script nằm phía dưới để code những
+            đoạn mã jQuery. Điều này tuân thủ nguyên tắc phải import file jQuery rồi mới sử dụng được.
+
+            Bước 3: Viết sự kiện click với jQuery.
+
+            Ở bước này thì trước tiên ta tìm hiểu cú pháp của jQuery đã nhé. jQuery luôn bắt đầu bằng ký tự đô la $ hoặc
+            dòng chữ jQuery.
+
+            // Lấy đối tượng có id = id-button trong javascript
+            var object = document.getElementById('id-button');
+
+            // Lấy đối tượng có id = id-button trong jQuery
+            var object = $('#id-button');
+            //Hoặc
+            var object = jQuery('#id-button');
+            Rất rõ ràng rồi nhỉ cool bây giờ ta sẽ viết jQuery xử lý sự kiện click nhé. Bạn sửa lại file index.html tại phần
+            xử lý jQuery mà mình đã đánh dấu như sau:
+
+            // Khi click vào button có id = id-button
+            $('#id-button').click(function()
+            {
+            // Cách 1: Khai báo biến và lấy giá trị
+            var textbox = $('#id-textbox');
+            alert(textbox.val());
+
+            // Cách 2: Truy xuất trực tiếp
+            alert($('#id-textbox').val());
+            });
+            Trong đó:
+
+            $('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một
+            hàm xử lý khi xảy ra sự kiện click.
+            $('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"
+            $('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".
+            Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.
+
+            3. Lời kết
+            Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng
+            các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không
+            hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.
+
+            Bài 01: jQuery là gì? Viết chương trình jquery đầu tiên
+            Đăng bởi: TheHalfHeart - Vào ngày: 15-08-2014 - View: 31211
+            Trong công nghệ web 2.0 thì Javascript là một thành phần không thể thiếu bởi vì các hiệu ứng trên website hầu
+            hết là kết quả của sự kết hợp Javascript và CSS, và để tạo các hiệu ứng đó thì ta phải lập trình những đoạn code
+            Javascript khá là dài dòng nên rất khó bảo trì và phát triển, vì vậy jQuery đã ra đời nhằm giải quyết vấn đề
+            này.
+
+            Trước khi xây dựng ứng dụng jQuery thì ta sẽ tìm hiểu khái niệm jQuery là gì đã nhé.
+
+            Nội dung chính
+
+            1. jQuery là gì?
+            2. Viết chương trình jQuery đầu tiên
+            Sử dụng javascript thuần
+            Sử dụng thư viện jQuery
+            3. Lời kết
+            1. jQuery là gì?
+            Bài viết được đăng tại freetuts.net
+            jQuery là một thư viện được xây dựng từ Javascript nhằm giúp lập trình viên xây dựng những chức năng có sử dụng
+            Javascript trở nên dễ dàng hơn. jQuery được tích hợp nhiều module khác nhau từ module hiệu ứng cho đến module
+            truy vấn selector. jQuery được sử dụng đến 99% trên tổng số website trên thế giới (trừ những website sử dụng JS
+            Framework).
+
+            Những việc làm hấp dẫn
+
+            (HCM) Front-end Engineer (Web)
+            WonoloHo Chi MinhNegotiable
+            Front-EndWeb
+
+            (HCM) Senior UI-UX Designer (UX/UI Design, Android, iOS, HTML, Mobile)
+            Qamera DesignHo Chi MinhNegotiable
+            UX/UI DesignAndroidiOSHTMLMobile
+
+            (HN) Web Developer (HTML5, JavaScript, JQuery, Full-Stack)
+            HoloscribeHa NoiNegotiable
+            HTML5JavaScriptJQueryFull-StackWeb
+            Các module chính của jQuery bao gồm:
+
+            Ajax - xử lý Ajax
+            Atributes - Xử lý các thuộc tính của đối tượng HTML
+            Effect - xử lý hiệu ứng
+            Event - xử lý sự kiện
+            Form - xử lý sự kiện liên quan tới form
+            DOM - xử lý Data Object Model
+            Selector - xử lý luồng lách giữa các đối tượng HTML
+            Để xem danh sách đầy đủ thì bạn vào trang jQuery API nhé.
+
+            2. Viết chương trình jQuery đầu tiên
+            Bài tập: Bây giờ để các bạn dễ hình dung hơn thì tôi có một bài toán như sau: Tạo một textbox và một button, sau
+            đó viết javascript cho sự kiện click vào button thì sẽ show nội dung của ô textbox.
+
+            Sử dụng javascript thuần
+            Nếu bạn chưa biết Javascript thì hãy xem serie Javascript căn bản này nhé.
+
+            Với bài toán này ta sẽ giải như sau: XEM DEMO
+
+            function showTextVal(){
+            var value = document.getElementById('id-textbox').value;
+            alert(value);
+            }
+            Ở button tôi đã gắn hàm showTextVal() vào sự kiện click, sau đó tôi có định nghĩa một hàm showTextVal() với chức
+            năng là hiển thị lên nội dung của textbox. Bây giờ ta sẽ tham khảo bài giải trong jquery nhé.
+
+            Sử dụng thư viện jQuery
+            Như tôi đã giới thiêu ở phần jQuery là gì thì jQuery là một thư viện viết bằng Javascript nên muốn sử dụng được
+            nó ta phải download về, sau đó đặt trong project và dùng thẻ script để gọi file jquery ra với cú pháp:
+
+            1
+            Bạn phải import file jQuery vào rồi thì mới sử dụng được các hàm của nó, nghĩa là tất cả các đoạn code nào có sử
+            dụng thư viện jQuery đều phải nằm phía dưới đoạn code import script trên.
+
+            Các bước thực hiện như sau: XEM DEMO.
+
+            Bước 1: Download bộ thư viện jquery tại đây.
+
+            Bước 2: Tạo file index.html với nội dung như sau:
+
+            Trong file index.html mình đã import file jQuery vào và đồng thời tạo một thẻ script nằm phía dưới để code những
+            đoạn mã jQuery. Điều này tuân thủ nguyên tắc phải import file jQuery rồi mới sử dụng được.
+
+            Bước 3: Viết sự kiện click với jQuery.
+
+            Ở bước này thì trước tiên ta tìm hiểu cú pháp của jQuery đã nhé. jQuery luôn bắt đầu bằng ký tự đô la $ hoặc
+            dòng chữ jQuery.
+
+            // Lấy đối tượng có id = id-button trong javascript
+            var object = document.getElementById('id-button');
+
+            // Lấy đối tượng có id = id-button trong jQuery
+            var object = $('#id-button');
+            //Hoặc
+            var object = jQuery('#id-button');
+            Rất rõ ràng rồi nhỉ cool bây giờ ta sẽ viết jQuery xử lý sự kiện click nhé. Bạn sửa lại file index.html tại phần
+            xử lý jQuery mà mình đã đánh dấu như sau:
+
+            // Khi click vào button có id = id-button
+            $('#id-button').click(function()
+            {
+            // Cách 1: Khai báo biến và lấy giá trị
+            var textbox = $('#id-textbox');
+            alert(textbox.val());
+
+            // Cách 2: Truy xuất trực tiếp
+            alert($('#id-textbox').val());
+            });
+            Trong đó:
+
+            $('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một
+            hàm xử lý khi xảy ra sự kiện click.
+            $('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"
+            $('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".
+            Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.
+
+            3. Lời kết
+            Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng
+            các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không
+            hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.
+
+            Bài 01: jQuery là gì? Viết chương trình jquery đầu tiên
+            Đăng bởi: TheHalfHeart - Vào ngày: 15-08-2014 - View: 31211
+            Trong công nghệ web 2.0 thì Javascript là một thành phần không thể thiếu bởi vì các hiệu ứng trên website hầu
+            hết là kết quả của sự kết hợp Javascript và CSS, và để tạo các hiệu ứng đó thì ta phải lập trình những đoạn code
+            Javascript khá là dài dòng nên rất khó bảo trì và phát triển, vì vậy jQuery đã ra đời nhằm giải quyết vấn đề
+            này.
+
+            Trước khi xây dựng ứng dụng jQuery thì ta sẽ tìm hiểu khái niệm jQuery là gì đã nhé.
+
+            Nội dung chính
+
+            1. jQuery là gì?
+            2. Viết chương trình jQuery đầu tiên
+            Sử dụng javascript thuần
+            Sử dụng thư viện jQuery
+            3. Lời kết
+            1. jQuery là gì?
+            Bài viết được đăng tại freetuts.net
+            jQuery là một thư viện được xây dựng từ Javascript nhằm giúp lập trình viên xây dựng những chức năng có sử dụng
+            Javascript trở nên dễ dàng hơn. jQuery được tích hợp nhiều module khác nhau từ module hiệu ứng cho đến module
+            truy vấn selector. jQuery được sử dụng đến 99% trên tổng số website trên thế giới (trừ những website sử dụng JS
+            Framework).
+
+            Những việc làm hấp dẫn
+
+            (HCM) Front-end Engineer (Web)
+            WonoloHo Chi MinhNegotiable
+            Front-EndWeb
+
+            (HCM) Senior UI-UX Designer (UX/UI Design, Android, iOS, HTML, Mobile)
+            Qamera DesignHo Chi MinhNegotiable
+            UX/UI DesignAndroidiOSHTMLMobile
+
+            (HN) Web Developer (HTML5, JavaScript, JQuery, Full-Stack)
+            HoloscribeHa NoiNegotiable
+            HTML5JavaScriptJQueryFull-StackWeb
+            Các module chính của jQuery bao gồm:
+
+            Ajax - xử lý Ajax
+            Atributes - Xử lý các thuộc tính của đối tượng HTML
+            Effect - xử lý hiệu ứng
+            Event - xử lý sự kiện
+            Form - xử lý sự kiện liên quan tới form
+            DOM - xử lý Data Object Model
+            Selector - xử lý luồng lách giữa các đối tượng HTML
+            Để xem danh sách đầy đủ thì bạn vào trang jQuery API nhé.
+
+            2. Viết chương trình jQuery đầu tiên
+            Bài tập: Bây giờ để các bạn dễ hình dung hơn thì tôi có một bài toán như sau: Tạo một textbox và một button, sau
+            đó viết javascript cho sự kiện click vào button thì sẽ show nội dung của ô textbox.
+
+            Sử dụng javascript thuần
+            Nếu bạn chưa biết Javascript thì hãy xem serie Javascript căn bản này nhé.
+
+            Với bài toán này ta sẽ giải như sau: XEM DEMO
+
+            function showTextVal(){
+            var value = document.getElementById('id-textbox').value;
+            alert(value);
+            }
+            Ở button tôi đã gắn hàm showTextVal() vào sự kiện click, sau đó tôi có định nghĩa một hàm showTextVal() với chức
+            năng là hiển thị lên nội dung của textbox. Bây giờ ta sẽ tham khảo bài giải trong jquery nhé.
+
+            Sử dụng thư viện jQuery
+            Như tôi đã giới thiêu ở phần jQuery là gì thì jQuery là một thư viện viết bằng Javascript nên muốn sử dụng được
+            nó ta phải download về, sau đó đặt trong project và dùng thẻ script để gọi file jquery ra với cú pháp:
+
+            1
+            Bạn phải import file jQuery vào rồi thì mới sử dụng được các hàm của nó, nghĩa là tất cả các đoạn code nào có sử
+            dụng thư viện jQuery đều phải nằm phía dưới đoạn code import script trên.
+
+            Các bước thực hiện như sau: XEM DEMO.
+
+            Bước 1: Download bộ thư viện jquery tại đây.
+
+            Bước 2: Tạo file index.html với nội dung như sau:
+
+            Trong file index.html mình đã import file jQuery vào và đồng thời tạo một thẻ script nằm phía dưới để code những
+            đoạn mã jQuery. Điều này tuân thủ nguyên tắc phải import file jQuery rồi mới sử dụng được.
+
+            Bước 3: Viết sự kiện click với jQuery.
+
+            Ở bước này thì trước tiên ta tìm hiểu cú pháp của jQuery đã nhé. jQuery luôn bắt đầu bằng ký tự đô la $ hoặc
+            dòng chữ jQuery.
+
+
+            // Lấy đối tượng có id = id-button trong javascript
+            var object = document.getElementById('id-button');
+
+            // Lấy đối tượng có id = id-button trong jQuery
+            var object = $('#id-button');
+            //Hoặc
+            var object = jQuery('#id-button');
+            Rất rõ ràng rồi nhỉ cool bây giờ ta sẽ viết jQuery xử lý sự kiện click nhé. Bạn sửa lại file index.html tại phần
+            xử lý jQuery mà mình đã đánh dấu như sau:
+
+            // Khi click vào button có id = id-button
+            $('#id-button').click(function()
+            {
+            // Cách 1: Khai báo biến và lấy giá trị
+            var textbox = $('#id-textbox');
+            alert(textbox.val());
+
+            // Cách 2: Truy xuất trực tiếp
+            alert($('#id-textbox').val());
+            });
+            Trong đó:
+
+            $('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một
+            hàm xử lý khi xảy ra sự kiện click.
+            $('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"
+            $('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".
+            Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.
+
+            3. Lời kết
+            Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng
+            các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không
+            hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.
+
+            Bài 01: jQuery là gì? Viết chương trình jquery đầu tiên
+            Đăng bởi: TheHalfHeart - Vào ngày: 15-08-2014 - View: 31211
+            Trong công nghệ web 2.0 thì Javascript là một thành phần không thể thiếu bởi vì các hiệu ứng trên website hầu
+            hết là kết quả của sự kết hợp Javascript và CSS, và để tạo các hiệu ứng đó thì ta phải lập trình những đoạn code
+            Javascript khá là dài dòng nên rất khó bảo trì và phát triển, vì vậy jQuery đã ra đời nhằm giải quyết vấn đề
+            này.
+
+            Trước khi xây dựng ứng dụng jQuery thì ta sẽ tìm hiểu khái niệm jQuery là gì đã nhé.
+
+            Nội dung chính
+
+            1. jQuery là gì?
+            2. Viết chương trình jQuery đầu tiên
+            Sử dụng javascript thuần
+            Sử dụng thư viện jQuery
+            3. Lời kết
+            1. jQuery là gì?
+            Bài viết được đăng tại freetuts.net
+            jQuery là một thư viện được xây dựng từ Javascript nhằm giúp lập trình viên xây dựng những chức năng có sử dụng
+            Javascript trở nên dễ dàng hơn. jQuery được tích hợp nhiều module khác nhau từ module hiệu ứng cho đến module
+            truy vấn selector. jQuery được sử dụng đến 99% trên tổng số website trên thế giới (trừ những website sử dụng JS
+            Framework).
+
+            Những việc làm hấp dẫn
+
+            (HCM) Front-end Engineer (Web)
+            WonoloHo Chi MinhNegotiable
+            Front-EndWeb
+
+            (HCM) Senior UI-UX Designer (UX/UI Design, Android, iOS, HTML, Mobile)
+            Qamera DesignHo Chi MinhNegotiable
+            UX/UI DesignAndroidiOSHTMLMobile
+
+            (HN) Web Developer (HTML5, JavaScript, JQuery, Full-Stack)
+            HoloscribeHa NoiNegotiable
+            HTML5JavaScriptJQueryFull-StackWeb
+            Các module chính của jQuery bao gồm:
+
+            Ajax - xử lý Ajax
+            Atributes - Xử lý các thuộc tính của đối tượng HTML
+            Effect - xử lý hiệu ứng
+            Event - xử lý sự kiện
+            Form - xử lý sự kiện liên quan tới form
+            DOM - xử lý Data Object Model
+            Selector - xử lý luồng lách giữa các đối tượng HTML
+            Để xem danh sách đầy đủ thì bạn vào trang jQuery API nhé.
+
+            2. Viết chương trình jQuery đầu tiên
+            Bài tập: Bây giờ để các bạn dễ hình dung hơn thì tôi có một bài toán như sau: Tạo một textbox và một button, sau
+            đó viết javascript cho sự kiện click vào button thì sẽ show nội dung của ô textbox.
+
+            Sử dụng javascript thuần
+            Nếu bạn chưa biết Javascript thì hãy xem serie Javascript căn bản này nhé.
+
+            Với bài toán này ta sẽ giải như sau: XEM DEMO
+
+            function showTextVal(){
+            var value = document.getElementById('id-textbox').value;
+            alert(value);
+            }
+            Ở button tôi đã gắn hàm showTextVal() vào sự kiện click, sau đó tôi có định nghĩa một hàm showTextVal() với chức
+            năng là hiển thị lên nội dung của textbox. Bây giờ ta sẽ tham khảo bài giải trong jquery nhé.
+
+            Sử dụng thư viện jQuery
+            Như tôi đã giới thiêu ở phần jQuery là gì thì jQuery là một thư viện viết bằng Javascript nên muốn sử dụng được
+            nó ta phải download về, sau đó đặt trong project và dùng thẻ script để gọi file jquery ra với cú pháp:
+
+            1
+            Bạn phải import file jQuery vào rồi thì mới sử dụng được các hàm của nó, nghĩa là tất cả các đoạn code nào có sử
+            dụng thư viện jQuery đều phải nằm phía dưới đoạn code import script trên.
+
+            Các bước thực hiện như sau: XEM DEMO.
+
+            Bước 1: Download bộ thư viện jquery tại đây.
+
+            Bước 2: Tạo file index.html với nội dung như sau:
+
+            Trong file index.html mình đã import file jQuery vào và đồng thời tạo một thẻ script nằm phía dưới để code những
+            đoạn mã jQuery. Điều này tuân thủ nguyên tắc phải import file jQuery rồi mới sử dụng được.
+
+            Bước 3: Viết sự kiện click với jQuery.
+
+            Ở bước này thì trước tiên ta tìm hiểu cú pháp của jQuery đã nhé. jQuery luôn bắt đầu bằng ký tự đô la $ hoặc
+            dòng chữ jQuery.
+
+            Ví dụ
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            // Lấy đối tượng có id = id-button trong javascript
+            var object = document.getElementById('id-button');
+
+            // Lấy đối tượng có id = id-button trong jQuery
+            var object = $('#id-button');
+            //Hoặc
+            var object = jQuery('#id-button');
+            Rất rõ ràng rồi nhỉ cool bây giờ ta sẽ viết jQuery xử lý sự kiện click nhé. Bạn sửa lại file index.html tại phần
+            xử lý jQuery mà mình đã đánh dấu như sau:
+
+            Code
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            // Khi click vào button có id = id-button
+            $('#id-button').click(function()
+            {
+            // Cách 1: Khai báo biến và lấy giá trị
+            var textbox = $('#id-textbox');
+            alert(textbox.val());
+
+            // Cách 2: Truy xuất trực tiếp
+            alert($('#id-textbox').val());
+            });
+            Trong đó:
+
+            $('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một
+            hàm xử lý khi xảy ra sự kiện click.
+            $('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"
+            $('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".
+            Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.
+
+            3. Lời kết
+            Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng
+            các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không
+            hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.
+
+        </div>
+        <div class="footer" style="background: burlywood;">
+            Trong đó:
+
+            $('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một
+            hàm xử lý khi xảy ra sự kiện click.
+            $('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"
+            $('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".
+            Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.
+
+            3. Lời kết
+            Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng
+            các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không
+            hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.
+
+            Bài 01: jQuery là gì? Viết chương trình jquery đầu tiên
+            Đăng bởi: TheHalfHeart - Vào ngày: 15-08-2014 - View: 31211
+            Trong công nghệ web 2.0 thì Javascript là một thành phần không thể thiếu bởi vì các hiệu ứng trên website hầu
+            hết là kết quả của sự kết hợp Javascript và CSS, và để tạo các hiệu ứng đó thì ta phải lập trình những đoạn code
+            Javascript khá là dài dòng nên rất khó bảo trì và phát triển, vì vậy jQuery đã ra đời nhằm giải quyết vấn đề
+            này.
+
+            Trước khi xây dựng ứng dụng jQuery thì ta sẽ tìm hiểu khái niệm jQuery là gì đã nhé.
+
+            Nội dung chính
+
+            1. jQuery là gì?
+            2. Viết chương trình jQuery đầu tiên
+            Sử dụng javascript thuần
+            Sử dụng thư viện jQuery
+            3. Lời kết
+            1. jQuery là gì?
+            Bài viết được đăng tại freetuts.net
+            jQuery là một thư viện được xây dựng từ Javascript nhằm giúp lập trình viên xây dựng những chức năng có sử dụng
+            Javascript trở nên dễ dàng hơn. jQuery được tích hợp nhiều module khác nhau từ module hiệu ứng cho đến module
+            truy vấn selector. jQuery được sử dụng đến 99% trên tổng số website trên thế giới (trừ những website sử dụng JS
+            Framework).
+
+            Những việc làm hấp dẫn
+
+            (HCM) Front-end Engineer (Web)
+            WonoloHo Chi MinhNegotiable
+            Front-EndWeb
+
+            (HCM) Senior UI-UX Designer (UX/UI Design, Android, iOS, HTML, Mobile)
+            Qamera DesignHo Chi MinhNegotiable
+            UX/UI DesignAndroidiOSHTMLMobile
+
+            (HN) Web Developer (HTML5, JavaScript, JQuery, Full-Stack)
+            HoloscribeHa NoiNegotiable
+            HTML5JavaScriptJQueryFull-StackWeb
+            Các module chính của jQuery bao gồm:
+
+            Ajax - xử lý Ajax
+            Atributes - Xử lý các thuộc tính của đối tượng HTML
+            Effect - xử lý hiệu ứng
+            Event - xử lý sự kiện
+            Form - xử lý sự kiện liên quan tới form
+            DOM - xử lý Data Object Model
+            Selector - xử lý luồng lách giữa các đối tượng HTML
+            Để xem danh sách đầy đủ thì bạn vào trang jQuery API nhé.
+
+            2. Viết chương trình jQuery đầu tiên
+            Bài tập: Bây giờ để các bạn dễ hình dung hơn thì tôi có một bài toán như sau: Tạo một textbox và một button, sau
+            đó viết javascript cho sự kiện click vào button thì sẽ show nội dung của ô textbox.
+
+            Sử dụng javascript thuần
+            Nếu bạn chưa biết Javascript thì hãy xem serie Javascript căn bản này nhé.
+
+            Với bài toán này ta sẽ giải như sau: XEM DEMO
+
+            function showTextVal(){
+            var value = document.getElementById('id-textbox').value;
+            alert(value);
+            }
+            Ở button tôi đã gắn hàm showTextVal() vào sự kiện click, sau đó tôi có định nghĩa một hàm showTextVal() với chức
+            năng là hiển thị lên nội dung của textbox. Bây giờ ta sẽ tham khảo bài giải trong jquery nhé.
+
+            Sử dụng thư viện jQuery
+            Như tôi đã giới thiêu ở phần jQuery là gì thì jQuery là một thư viện viết bằng Javascript nên muốn sử dụng được
+            nó ta phải download về, sau đó đặt trong project và dùng thẻ script để gọi file jquery ra với cú pháp:
+
+            1
+            Bạn phải import file jQuery vào rồi thì mới sử dụng được các hàm của nó, nghĩa là tất cả các đoạn code nào có sử
+            dụng thư viện jQuery đều phải nằm phía dưới đoạn code import script trên.
+
+            Các bước thực hiện như sau: XEM DEMO.
+
+            Bước 1: Download bộ thư viện jquery tại đây.
+
+            Bước 2: Tạo file index.html với nội dung như sau:
+
+            Trong file index.html mình đã import file jQuery vào và đồng thời tạo một thẻ script nằm phía dưới để code những
+            đoạn mã jQuery. Điều này tuân thủ nguyên tắc phải import file jQuery rồi mới sử dụng được.
+
+            Bước 3: Viết sự kiện click với jQuery.
+
+            Ở bước này thì trước tiên ta tìm hiểu cú pháp của jQuery đã nhé. jQuery luôn bắt đầu bằng ký tự đô la $ hoặc
+            dòng chữ jQuery.
+
+            Ví dụ
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            // Lấy đối tượng có id = id-button trong javascript
+            var object = document.getElementById('id-button');
+
+            // Lấy đối tượng có id = id-button trong jQuery
+            var object = $('#id-button');
+            //Hoặc
+            var object = jQuery('#id-button');
+            Rất rõ ràng rồi nhỉ cool bây giờ ta sẽ viết jQuery xử lý sự kiện click nhé. Bạn sửa lại file index.html tại phần
+            xử lý jQuery mà mình đã đánh dấu như sau:
+
+            Code
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            // Khi click vào button có id = id-button
+            $('#id-button').click(function()
+            {
+            // Cách 1: Khai báo biến và lấy giá trị
+            var textbox = $('#id-textbox');
+            alert(textbox.val());
+
+            // Cách 2: Truy xuất trực tiếp
+            alert($('#id-textbox').val());
+            });
+            Trong đó:
+
+            $('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một
+            hàm xử lý khi xảy ra sự kiện click.
+            $('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"
+            $('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".
+            Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.
+
+            3. Lời kết
+            Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng
+            các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không
+            hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.
+        </div>
+        <div class="footer" style="background: burlywood;">
+            Trong đó:
+
+            $('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một
+            hàm xử lý khi xảy ra sự kiện click.
+            $('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"
+            $('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".
+            Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.
+
+            3. Lời kết
+            Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng
+            các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không
+            hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.
+
+            Bài 01: jQuery là gì? Viết chương trình jquery đầu tiên
+            Đăng bởi: TheHalfHeart - Vào ngày: 15-08-2014 - View: 31211
+            Trong công nghệ web 2.0 thì Javascript là một thành phần không thể thiếu bởi vì các hiệu ứng trên website hầu
+            hết là kết quả của sự kết hợp Javascript và CSS, và để tạo các hiệu ứng đó thì ta phải lập trình những đoạn code
+            Javascript khá là dài dòng nên rất khó bảo trì và phát triển, vì vậy jQuery đã ra đời nhằm giải quyết vấn đề
+            này.
+
+            Trước khi xây dựng ứng dụng jQuery thì ta sẽ tìm hiểu khái niệm jQuery là gì đã nhé.
+
+            Nội dung chính
+
+            1. jQuery là gì?
+            2. Viết chương trình jQuery đầu tiên
+            Sử dụng javascript thuần
+            Sử dụng thư viện jQuery
+            3. Lời kết
+            1. jQuery là gì?
+            Bài viết được đăng tại freetuts.net
+            jQuery là một thư viện được xây dựng từ Javascript nhằm giúp lập trình viên xây dựng những chức năng có sử dụng
+            Javascript trở nên dễ dàng hơn. jQuery được tích hợp nhiều module khác nhau từ module hiệu ứng cho đến module
+            truy vấn selector. jQuery được sử dụng đến 99% trên tổng số website trên thế giới (trừ những website sử dụng JS
+            Framework).
+
+            Những việc làm hấp dẫn
+
+            (HCM) Front-end Engineer (Web)
+            WonoloHo Chi MinhNegotiable
+            Front-EndWeb
+
+            (HCM) Senior UI-UX Designer (UX/UI Design, Android, iOS, HTML, Mobile)
+            Qamera DesignHo Chi MinhNegotiable
+            UX/UI DesignAndroidiOSHTMLMobile
+
+            (HN) Web Developer (HTML5, JavaScript, JQuery, Full-Stack)
+            HoloscribeHa NoiNegotiable
+            HTML5JavaScriptJQueryFull-StackWeb
+            Các module chính của jQuery bao gồm:
+
+            Ajax - xử lý Ajax
+            Atributes - Xử lý các thuộc tính của đối tượng HTML
+            Effect - xử lý hiệu ứng
+            Event - xử lý sự kiện
+            Form - xử lý sự kiện liên quan tới form
+            DOM - xử lý Data Object Model
+            Selector - xử lý luồng lách giữa các đối tượng HTML
+            Để xem danh sách đầy đủ thì bạn vào trang jQuery API nhé.
+
+            2. Viết chương trình jQuery đầu tiên
+            Bài tập: Bây giờ để các bạn dễ hình dung hơn thì tôi có một bài toán như sau: Tạo một textbox và một button, sau
+            đó viết javascript cho sự kiện click vào button thì sẽ show nội dung của ô textbox.
+
+            Sử dụng javascript thuần
+            Nếu bạn chưa biết Javascript thì hãy xem serie Javascript căn bản này nhé.
+
+            Với bài toán này ta sẽ giải như sau: XEM DEMO
+
+            function showTextVal(){
+            var value = document.getElementById('id-textbox').value;
+            alert(value);
+            }
+            Ở button tôi đã gắn hàm showTextVal() vào sự kiện click, sau đó tôi có định nghĩa một hàm showTextVal() với chức
+            năng là hiển thị lên nội dung của textbox. Bây giờ ta sẽ tham khảo bài giải trong jquery nhé.
+
+            Sử dụng thư viện jQuery
+            Như tôi đã giới thiêu ở phần jQuery là gì thì jQuery là một thư viện viết bằng Javascript nên muốn sử dụng được
+            nó ta phải download về, sau đó đặt trong project và dùng thẻ script để gọi file jquery ra với cú pháp:
+
+            1
+            Bạn phải import file jQuery vào rồi thì mới sử dụng được các hàm của nó, nghĩa là tất cả các đoạn code nào có sử
+            dụng thư viện jQuery đều phải nằm phía dưới đoạn code import script trên.
+
+            Các bước thực hiện như sau: XEM DEMO.
+
+            Bước 1: Download bộ thư viện jquery tại đây.
+
+            Bước 2: Tạo file index.html với nội dung như sau:
+
+            Trong file index.html mình đã import file jQuery vào và đồng thời tạo một thẻ script nằm phía dưới để code những
+            đoạn mã jQuery. Điều này tuân thủ nguyên tắc phải import file jQuery rồi mới sử dụng được.
+
+            Bước 3: Viết sự kiện click với jQuery.
+
+            Ở bước này thì trước tiên ta tìm hiểu cú pháp của jQuery đã nhé. jQuery luôn bắt đầu bằng ký tự đô la $ hoặc
+            dòng chữ jQuery.
+
+            Ví dụ
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            // Lấy đối tượng có id = id-button trong javascript
+            var object = document.getElementById('id-button');
+
+            // Lấy đối tượng có id = id-button trong jQuery
+            var object = $('#id-button');
+            //Hoặc
+            var object = jQuery('#id-button');
+            Rất rõ ràng rồi nhỉ cool bây giờ ta sẽ viết jQuery xử lý sự kiện click nhé. Bạn sửa lại file index.html tại phần
+            xử lý jQuery mà mình đã đánh dấu như sau:
+
+            Code
+            1
+            2
+            3
+            4
+            5
+            6
+            7
+            8
+            9
+            10
+            // Khi click vào button có id = id-button
+            $('#id-button').click(function()
+            {
+            // Cách 1: Khai báo biến và lấy giá trị
+            var textbox = $('#id-textbox');
+            alert(textbox.val());
+
+            // Cách 2: Truy xuất trực tiếp
+            alert($('#id-textbox').val());
+            });
+            Trong đó:
+
+            $('#id-button').click() có nghĩa là gán sự kiện click cho thẻ HTML có id="id-button", tham số truyền vào là một
+            hàm xử lý khi xảy ra sự kiện click.
+            $('#id-textbox') có nghĩa là lấy thẻ HTML có id="id-textbox"
+            $('#id-textbox').val() có nghĩa lấy giá trị của thẻ HTML có id="id-textbox".
+            Nếu bạn thắc mắc tại sao các đoạn mã jQuery lại đặt ở phía dưới các thẻ HTML thì hãy xem ở bài tiếp theo nhé.
+
+            3. Lời kết
+            Qua ví dụ bài học này bạn đã hiểu được jQuery là gì và biết được cú pháp căn bản của jquerry. Bài này có sử dụng
+            các kiến thức mà chúng ta chưa học nhưng mình có giải thích rất kỹ rồi nên hy vọng các bạn hiểu, nếu vẫn không
+            hiểu thì bạn có thể xem các bài tiếp theo trong series này nhé.
+        </div>
+    </div>
+
+</div>
+</body>
+<script src="public/js/bootstrap.js"></script>
+<script src="public/js/main.js"></script>
+<script>
+    $(document).ready(function () {
+        var attr = {
+            text: "day la box demo",
+            top:"250",
+
+        };
+
+        $('#almost-show').inner_float(attr);
+    })
+</script>
+</html>

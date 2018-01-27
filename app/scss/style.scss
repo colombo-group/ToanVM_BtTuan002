@@ -1,0 +1,21 @@
+#almost-show{
+  #pBox{
+    position: relative;
+    background: orange;
+    border: 1px solid black;
+    width: 150px;
+    height: 400px;
+    top: 200px;
+    //transition: top 0.01s linear;
+  }
+
+  #cBox{
+    position: absolute;
+    width: 140px;
+    height: 140px;
+    background: yellow;
+    border: 1px solid black;
+    left: 5px;
+    //transition: top 0.1s linear;
+  }
+}
