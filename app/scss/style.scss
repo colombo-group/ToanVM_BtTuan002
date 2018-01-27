@@ -1,11 +1,10 @@
 #almost-show{
   #pBox{
-    position: relative;
     background: orange;
     border: 1px solid black;
-    width: 150px;
-    height: 400px;
-    top: 200px;
+    width: 200px;
+    height: 600px;
+    margin-top: 200px;
     //transition: top 0.01s linear;
   }
 
@@ -16,6 +15,6 @@
     background: yellow;
     border: 1px solid black;
     left: 5px;
-    //transition: top 0.1s linear;
+    transition: top 0.3s ease-out;
   }
 }

@@ -29,40 +29,44 @@ $(function () {
             var cBox = `<div id="cBox"></div>`;
             $('#pBox').append(cBox);
 
-            /*khai báo biến*/
-            let scroll = $(window).scrollTop();
+
 
             let pBox_top = $('#pBox').offset().top;
             let cBox_top = $('#cBox').offset().top;
 
-            console.log(settings.top +"  "+ pBox_top)
-            if(settings.top < pBox_top ){
-                $('#cBox').css('top', 2)
+            console.log(settings.top + "  " + pBox_top)
+            /*Khởi tạo giá trị*/
+            if (settings.top < pBox_top) {
+                $('#cBox').css('top', pBox_top + 2)
             }
-            else{
-                $('#cBox').css('top', scroll-(pBox_top-settings.top))
+            else {
+                $('#cBox').css('top', (settings.top))
             }
 
 
             $(window).bind('scroll', function () {
-
+                /*khai báo biến*/
+                let scroll = parseInt($(window).scrollTop());
 
                 console.log('pBox top = ' + pBox_top);
                 console.log('cBox top = ' + cBox_top);
+                // console.log('top = ' + scroll);
+                let top = scroll + parseInt(settings.top);
+                console.log('top2 = ' + top);
 
 
                 /*xử lý hiệu ứng*/
 
-                console.log(settings.top +"  "+ pBox_top)
-                if(settings.top < pBox_top ){
-                    $('#cBox').css('top', 2)
+                if (settings.top <= pBox_top ) {
+                    $('#cBox').css('top', pBox_top + 2);
                 }
-                else{
-                    $('#cBox').css('top', scroll-(pBox_top-settings.top))
+                else {
+                    $('#cBox').css('top', top)
                 }
 
-
-
+                if ((top + $('#cBox').height()) >= (pBox_top + $('#pBox').height())){
+                    $('#cBox').css('top', (pBox_top + $('#pBox').height()-$('#cBox').height() )-2)
+                }
 
             })
         });
