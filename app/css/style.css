@@ -7,9 +7,9 @@
 
 #almost-show #cBox {
   position: absolute;
-  width: 140px;
+  width: 250px;
   height: 140px;
   background: yellow;
   border: 1px solid black;
   left: 5px;
-  transition: top 0.3s ease-out; }
+  transition: top 0s ease-out; }

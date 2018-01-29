@@ -36,7 +36,7 @@ $(function () {
 
             console.log(settings.top + "  " + pBox_top)
             /*Khởi tạo giá trị*/
-            if (settings.top < pBox_top) {
+            if (parseInt(settings.top) < pBox_top) {
                 $('#cBox').css('top', pBox_top + 2)
             }
             else {
@@ -57,7 +57,7 @@ $(function () {
 
                 /*xử lý hiệu ứng*/
 
-                if (settings.top <= pBox_top ) {
+                if (top<= pBox_top ) {
                     $('#cBox').css('top', pBox_top + 2);
                 }
                 else {
